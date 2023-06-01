@@ -2,9 +2,8 @@
   "name": "weather-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "mainController.js",
   "scripts": {
-    "dev": "webpack serve",
     "build": "webpack"
   },
   "keywords": [],
