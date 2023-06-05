@@ -31,9 +31,9 @@ function updateWindSpeed(wth) {
   windSpeed.textContent = wth.current.wind_mph;
 }
 
-function showWeather() {
-  const container = document.querySelector('#weather-info');
-  container.classList.remove('hidden');
+function showElement(element) {
+  const loading = document.querySelector(element);
+  loading.classList.remove('hidden');
 }
 
 export default function updateWeather(wth) {
@@ -43,5 +43,5 @@ export default function updateWeather(wth) {
   updateTemperature(wth);
   updateHumidity(wth);
   updateWindSpeed(wth);
-  showWeather();
+  showElement('#weather-info');
 }
