@@ -21,13 +21,7 @@ async function getWeather(location) {
 async function processData() {
   try {
     const location = document.getElementById('input-form').value;
-
-    let weather;
-    if (location === '') {
-      weather = await getWeather('london'); // default city
-    } else {
-      weather = await getWeather(location);
-    }
+    const weather = location === '' ? await getWeather('london') : await getWeather(location);
 
     updateWeather(weather);
   } catch (error) {
