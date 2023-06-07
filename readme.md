@@ -17,5 +17,4 @@ The project uses the following technologies:
 - HTML, CSS, and JavaScript for the front-end development.
 - Tailwind for the UI framework and styling.
 - Webpack for bundling and transpiling the code.
-- Babel for converting ES6+ syntax to ES5.
 - ESLint for code linting and formatting.
