@@ -36,12 +36,32 @@ function showElement(element) {
   loading.classList.remove('hidden');
 }
 
-export default function updateWeather(wth) {
+function hideElement(element) {
+  const loading = document.querySelector(element);
+  loading.classList.add('hidden');
+}
+
+function displayInfo(elementToHide, elementToShow) {
+  setTimeout(() => {
+    hideElement(elementToHide);
+    showElement(elementToShow);
+  }, 400);
+}
+
+function hideInfo(elementToShow, elementToHide) {
+  showElement(elementToShow);
+  hideElement(elementToHide);
+}
+
+function updateWeather(wth) {
   updateCityAndCountry(wth);
   updateCondition(wth);
   updateIcon(wth);
   updateTemperature(wth);
   updateHumidity(wth);
   updateWindSpeed(wth);
-  showElement('#weather-info');
 }
+
+export {
+  updateWeather, displayInfo, hideInfo, hideElement,
+};
