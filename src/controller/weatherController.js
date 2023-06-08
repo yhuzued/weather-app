@@ -22,7 +22,7 @@ async function getWeather(location) {
   }
 }
 
-async function processData() {
+export default async function processData() {
   try {
     const location = document.getElementById('input-form').value;
     const weather = location === '' ? await getWeather('london') : await getWeather(location);
@@ -32,12 +32,6 @@ async function processData() {
     displayInfo('#loading', '#error');
     throw new Error('Can\'t process data');
   }
-}
-
-export default function submit(e) {
-  e.preventDefault();
-  processData();
-  e.target.reset();
 }
 
 

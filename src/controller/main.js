@@ -1,5 +1,9 @@
 import '../assets/style.css';
 
-import submit from './weatherController'
+import processData from './weatherController'
 
-document.addEventListener('submit', (e) => submit(e));
+document.addEventListener('submit', (e) => {
+  e.preventDefault();
+  processData();
+  e.target.reset();
+});
