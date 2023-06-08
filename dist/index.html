@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+<script defer src="bundle.js"></script><link href="main.css" rel="stylesheet"></head>
+
+<body class="bg-blue-200">
+  <main class="container mx-auto max-w-[500px]">
+    <form class="flex flex-col m-5 bg-slate-50 p-5 rounded-md drop-shadow-md gap-3 items-center">
+      <h1 class="text-xl p-3">Weather Forecast</h1>
+      <input type="text" name="input-form" id="input-form"
+        class="w-full min-h-[30px] p-2 rounded-md drop-shadow-sm border-2 outline-blue-400" autofocus="autofocus"
+        placeholder="Enter city name">
+      <input type="submit" value="Search"
+        class="bg-blue-400 text-slate-50 p-2 cursor-pointer w-full rounded-md hover:bg-white hover:text-gray-700 border-2 border-blue-400 hover:border-blue-600 focus:outline-blue-700">
+    </form>
+    <div id="weather-info" class="flex flex-col m-5 bg-slate-50 p-5 rounded-md drop-shadow-md hidden">
+      <h1 class="text-lg font-bold text-center">Weather!</h1>
+      <h2 class="text-center p-1 text-xl"><span id="city"></span> <span id="country"></span></h2>
+      <p id="weather-condition" class="text-center p-1"></p>
+      <div class="image flex justify-center">
+        <img id="weather-icon" src="" alt="image-of-weather" class="w-22 h-22">
+      </div>
+      <div class="info flex justify-between bg-slate-200 p-2 drop-shadow-sm">
+        <div>
+          <p class="text-center p-1">Temperature</p>
+          <p class="text-center p-1"><span id="temperature"></span>℃</p>
+        </div>
+        <div>
+          <p class="text-center p-1">Humidity</p>
+          <p class="text-center p-1"><span id="humidity"></span>%</p>
+        </div>
+        <div>
+          <p class="text-center p-1">Wind speed</p>
+          <p class="text-center p-1"><span id="wind-speed"></span>mph</p>
+        </div>
+      </div>
+    </div>
+    <div id="loading" class="flex flex-col m-5 bg-slate-50 p-5 rounded-md drop-shadow-md hidden">
+      <p class="text-center">loading data...</p>
+    </div>
+    <div id="error" class="flex flex-col m-5 bg-slate-50 p-5 rounded-md drop-shadow-md hidden">
+      <p class="italic text-red-500">*The city name you entered does not match any known city</p>
+    </div>
+    </div>
+  </main>
+</body>
+
+</html>
