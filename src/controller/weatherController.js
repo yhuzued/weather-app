@@ -1,4 +1,4 @@
-import '../assets/style.css';
+
 import {
   updateWeather, displayInfo, hideInfo, hideElement,
 } from './domController';
@@ -34,10 +34,10 @@ async function processData() {
   }
 }
 
-function submit(e) {
+export default function submit(e) {
   e.preventDefault();
   processData();
   e.target.reset();
 }
 
-document.addEventListener('submit', (e) => submit(e));
+
